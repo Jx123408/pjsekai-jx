@@ -8,7 +8,7 @@ Node.js, Vite, Reactを利用した開発環境を構築するためのディレ
 リポジトリをダウンロードして展開します。
 次のツリーのようなファイル構成になっているはずです。
 ```
-カレントディレクトリ
+env
 │  asconfig.json
 │  package.json
 │  vite.config.js

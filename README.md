@@ -8,7 +8,7 @@ Node.js, Vite, React, Assembly Scriptを利用した開発環境を構築する�
 リポジトリをダウンロードして展開します。
 次のツリーのようなファイル構成になっているはずです。
 (`env`ディレクトリをカレントディレクトリとします。
-また、`build`ディレクトリは自分作成してください。)
+また、`./build`ディレクトリ、`./src/as/build`ディレクトリは作成してください。)
 ```
 env
 │  asconfig.json
@@ -58,6 +58,7 @@ env
                 unzip.min.js
 ```
 ## node.jsをインストール
+(すでにnode.jsとnpmが使える環境下であればこの項目の操作をする必要はありません。)
 nvmをインストールしてください。私のWin11環境では[nvm-windows](https://github.com/coreybutler/nvm-windows)をインストールしました。
 そのあと、次のコマンドでnode.jsとnpm(LTS)をインストールしてください。
 ```

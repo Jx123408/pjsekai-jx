@@ -31,8 +31,8 @@ env
     │  │
     │  └─build
     └─public
+        │  manifest.json
         │  sw.js
-        │　manifest.json
         │
         ├─icons
         │      favicon.ico
@@ -51,8 +51,8 @@ env
         │      delete.svg
         │      edit.svg
         │      loading.svg
+        │      noimage.png
         │      system_tex.webp
-        │      unknown.png
         │
         └─zlib
                 gunzip.min.js

@@ -1,5 +1,5 @@
 # SonolusWP_dev
-Node.js, Vite, Reactを利用した開発環境を構築するためのディレクトリが格納されたリポジトリです。
+Node.js, Vite, React, Assembly Scriptを利用した開発環境を構築するためのディレクトリが格納されたリポジトリです。
 # 環境構築方法
 私の環境は次の通りです。
 > Windows 11
@@ -7,6 +7,8 @@ Node.js, Vite, Reactを利用した開発環境を構築するためのディレ
 ## リポジトリをダウンロード
 リポジトリをダウンロードして展開します。
 次のツリーのようなファイル構成になっているはずです。
+(`env`ディレクトリをカレントディレクトリとします。
+また、`build`ディレクトリは自分作成してください。)
 ```
 env
 │  asconfig.json
@@ -57,7 +59,7 @@ env
 ```
 ## node.jsをインストール
 nvmをインストールしてください。私のWin11環境では[nvm-windows](https://github.com/coreybutler/nvm-windows)をインストールしました。
-そのあと、次のコマンドでnode.jsとnpm(LTSで問題ない)をインストールしてください。
+そのあと、次のコマンドでnode.jsとnpm(LTS)をインストールしてください。
 ```
 nvm install lts
 ```

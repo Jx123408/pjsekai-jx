@@ -23,7 +23,6 @@ env
     │  engine.js
     │  i18n.js
     │  index.html
-    │  manifest.json
     │  style.css
     │  system.jsx
     │
@@ -34,6 +33,7 @@ env
     │  │
     │  └─build
     └─public
+        │  manifest.json
         │  sw.js
         │
         ├─icons
@@ -53,8 +53,8 @@ env
         │      delete.svg
         │      edit.svg
         │      loading.svg
+        │      noimage.png
         │      system_tex.webp
-        │      unknown.png
         │
         └─zlib
                 gunzip.min.js

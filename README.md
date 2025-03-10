@@ -1,3 +1,4 @@
+[English](https://github.com/1217pond/SonolusWP_dev/blob/main/README-en.md)
 # SonolusWP_dev
 Node.js, Vite, React, Assembly Scriptを利用した開発環境を構築するためのディレクトリが格納されたリポジトリです。MITライセンスで公開されています。
 # 環境構築方法

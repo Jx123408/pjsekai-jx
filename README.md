@@ -1,5 +1,5 @@
 # SonolusWP_dev
-Node.js, Vite, React, Assembly Scriptを利用した開発環境を構築するためのディレクトリが格納されたリポジトリです。
+Node.js, Vite, React, Assembly Scriptを利用した開発環境を構築するためのディレクトリが格納されたリポジトリです。MITライセンスで公開されています。
 # 環境構築方法
 私の環境は次の通りです。
 > Windows 11

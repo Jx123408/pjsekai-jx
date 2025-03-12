@@ -8,15 +8,17 @@ Node.js, Vite, React, AssemblyScriptを利用した開発環境を構築する�
 ## リポジトリをダウンロード
 リポジトリをダウンロードして展開します。
 次のツリーのようなファイル構成になっているはずです。
-(`env`ディレクトリをカレントディレクトリとします。
-また、`./build`ディレクトリ、`./src/as/build`ディレクトリは作成してください。)
+(`env`ディレクトリをカレントディレクトリとします。また、ディレクトリが消えないように`placeholder`がいくつか配置されています。残っていても支障はありませんが、消してもかまいません。)
 ```
 env
 │  asconfig.json
+│  package-lock.json
 │  package.json
 │  vite.config.js
 │
 ├─build
+│      placeholder
+│
 └─src
     │  engine.js
     │  i18n.js
@@ -30,6 +32,8 @@ env
     │  │      node_calc.ts
     │  │
     │  └─build
+    │          placeholder
+    │
     └─public
         │  manifest.json
         │  sw.js
@@ -96,9 +100,9 @@ npm install
 - `i18n.js`: i18nのクラスを定義するJavaScript
 
 ## AssemblyScriptをコンパイル
-次のコマンドでAssemblyScriptをコンパイルしてください。
+次のコマンドでAssemblyScriptをコンパイルしてください。(開発用なので軽量化がされていません。また、ソースマップも生成されるのでトレースバックが可能です。)
 ```
-npm run asc_release
+npm run asc_debug
 ```
 ## リアルタイム更新しながらサイトをプレビューする
 次のコマンドを実行してサーバーを起動してください。
@@ -118,9 +122,10 @@ npm run dev
 ```
 どのURLからでもアクセスできます。(`Local`以外はファイアウォールのポート開放が必要な場合があります)  
 `src`内のファイルを更新するとサイトも更新されます。コーディング中に使うことをおすすめします。  
+(Viteはコンパイル済みのWASMを参照しているため、`node_calc.ts`を書きかえる度に[AssemblyScriptをコンパイル](#assemblyscriptをコンパイル)してください。)
 
 ## ビルドをプレビュー
-次のコマンドを実行してサーバーを起動してください。
+次のコマンドを実行してサーバーを起動してください。(先に[AssemblyScriptをコンパイル](#assemblyscriptをコンパイル)しておいてください。)
 ```
 npm run preview
 ```
@@ -136,11 +141,11 @@ npm run preview
 どのURLからでもアクセスできます。(`Local`以外はファイアウォールのポート開放が必要な場合があります)  
 ビルド結果をプレビューすることができます。  
 ビルドする前に正常に動作するか確認するときに使うことをおすすめします。  
-(Viteはコンパイル済みのWASMを参照しているため、`node_calc.ts`を書きかえる度に[AssemblyScriptをコンパイル](#assemblyscriptをコンパイル)してください。)
 
 ## ビルド
 次のコマンドを実行してビルドできます。
 ```
+npm run asc_release
 npm run build
 ```
 `./build`ディレクトリ内にビルド済みのページデータが生成されます。  

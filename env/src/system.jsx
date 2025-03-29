@@ -3027,7 +3027,16 @@ if ("serviceWorker" in navigator) {
 let TEMP = window.TEMP = {};//一時変数
 let ADDRESS = "";
 let SERVER_NAME = "";
-const RELAY_SERVER_URL = "https://swp-server.ponz.workers.dev/";
+const RELAY_SERVER_URL = "https://script.google.com/macros/s/AKfycbxMYDHCiwTiQnmdv7UsKO0jKEpyX_ZFC171atQY1Ae1FqA7JIHD7eOY-xtmOw4Nl_ngYA/exec";
 let THUMB_TMP = {};
 const COLLECTION_VERSION = 4;
 const SERVER_VERSION = 2;
+const blob_override = (res) => {
+    return new Promise((resolve, reject) => {
+        res.text().then(base64 => {
+            let bin = atob(base64);
+            let array = new Uint8Array(bin.length).map((_, i) => bin.charCodeAt(i));
+            resolve(new Blob([array.buffer],{type:"application/octet-stream"}));
+        });
+    });
+}

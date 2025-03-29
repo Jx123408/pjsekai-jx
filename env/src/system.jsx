@@ -730,7 +730,7 @@ class Img_custom extends React.Component {
                 }).then(response => {
                     if(response){
                         if(response.ok){
-                            response.blob().then(blob => {
+                            blob_override(response).then(blob => {
                                 this.obj_url = URL.createObjectURL(blob);
                                 this.setState({
                                     src: this.obj_url
@@ -2865,7 +2865,7 @@ async function get_content(domain,endpoint,hash){
             });
             if(response){
                 if(response.ok){
-                    let blob = await response.blob();
+                    let blob = await blob_override(response);
                     db.cache.put({
                         hash: hash,
                         file: blob
@@ -2888,7 +2888,7 @@ async function get_content(domain,endpoint,hash){
         });
         if(response){
             if(response.ok){
-                return await response.blob();
+                return await blob_override(response);
             }else{
                 throw new Error(`${response.status} : ${response.statusText}`);
             }

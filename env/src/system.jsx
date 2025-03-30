@@ -192,7 +192,6 @@ class Title extends React.Component{
             <div className="TOStext">{t("スタートすると")}<a className="TOStag" onClick={()=>{
                 C.change_menu("TOS");
             }}>{t("利用規約")}</a>{t("に同意したものとみなします。")}</div>
-            <div className="feedback">{t("質問はDiscordへ")}: <a href="https://discordapp.com/users/951455786423439400">ponz8264</a></div>
             <div id="version">System Version: beta-0.2.0<br/>Sonolus Version: beta-0.8.11</div>
         </div>);
     }
